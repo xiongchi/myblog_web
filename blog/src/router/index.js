@@ -1,21 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import article from '@/components/article/article'
-import stock from '@/components/stock/stock'
+import article from 'components/article/article'
+import stock from 'components/stock/stock'
+import write from 'components/write/write'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/article',
-      name: 'article',
-      components: {'v-article': article}
-    },
-    {
-      path: 'stock',
-      name: 'stock',
-      component: stock
-    }
+    {path: '/', redirect: '/article'},
+    {path: '/article', name: 'v-article', component: article},
+    {path: '/stock', name: 'stock', component: stock},
+    {path: '/write', name: 'v-write', component: write}
   ]
 })

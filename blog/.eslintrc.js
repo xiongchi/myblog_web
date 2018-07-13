@@ -27,6 +27,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     //设置是否有分号 always 表示有
     'semi':['error', 'never'],
-    'indent': 0
+    'indent': 0,
+    'space-before-function-paren': 0
   }
 }
