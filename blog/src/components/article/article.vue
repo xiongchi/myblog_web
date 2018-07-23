@@ -23,6 +23,7 @@
         </div>
       </div>
     </div>
+    <!--右侧栏-->
     <div class="right">
       <div class="msg-div">
         <div class="r-img-div"></div>
@@ -55,14 +56,19 @@
         }
       }
     },
-    created() {
-      this.$http.jsonp('http://localhost:8081/user/find/1').then((response) => {
-        response = response.body
-        console.log(response)
-        if (response.code === ERR_OK) {
-          this.user = response.obj
-        }
-      })
+    mounted() {
+      this.getUserMsg()
+    },
+    methods: {
+      getUserMsg() {
+        this.$http.jsonp('http://localhost:8081/user/find/1').then((response) => {
+          response = response.body
+          console.log(response)
+          if (response.code === ERR_OK) {
+            this.user = response.obj
+          }
+        })
+      }
     },
     components: {
       'v-slider': slider

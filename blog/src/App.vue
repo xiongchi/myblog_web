@@ -14,16 +14,19 @@
         <div>
           <router-link :to="{path: '/write'}" active-class="active">写</router-link>
         </div>
+        <div>
+          <router-link :to="{path: '/photos'}" active-class="active">图</router-link>
+        </div>
       </div>
       <div class="lr-div">
         <el-button class="login" type="text" @click="loginDialog = true">登录</el-button>
         <el-dialog title="登录" width="450px" :visible.sync="loginDialog">
           <!--<div style="height: 200px; width: 40%;background-color: red"></div>-->
-          <v-login></v-login>
+          <v-landreg :loginFlag="loginFlag"></v-landreg>
         </el-dialog>
         <el-button class="register" @click="registerDialog = true">注册</el-button>
         <el-dialog title="注册" width="450px" :visible.sync="registerDialog">
-          <v-register></v-register>
+          <v-landreg :regFlag="regFlag"></v-landreg>
         </el-dialog>
       </div>
     </div>
@@ -37,17 +40,20 @@
   // import layer from '../static/js/layer'
   // layer.open()
   import validate from 'components/slider/validate'
-  import login from 'components/common/login'
-  import register from 'components/common/register'
+  import landreg from 'components/common/landreg'
   export default {
     name: 'App',
+    props: {
+    },
     data() {
       return {
         loginDialog: false,
-        registerDialog: false
+        registerDialog: false,
+        loginFlag: true,
+        regFlag: true
       }
     },
-    components: {'v-validate': validate, 'v-login': login, 'v-register': register}
+    components: {'v-validate': validate, 'v-landreg': landreg}
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
@@ -63,7 +69,7 @@
     position fixed
     z-index 9998
     border-bottom 1px solid rgba(7, 17, 27, 0.1)
-    box-shadow 1px 1px 0.5px #888888
+    box-shadow 2px 2px 5px #bbb
     .opt
       display flex
       width 40%

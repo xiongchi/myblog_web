@@ -68,7 +68,11 @@
     "element-ui": "^2.4.3",
     "babel-plugin-component": "^1.1.1",
     "babel-preset-es2015": "^6.24.1",
-    "mavon-editor": "^2.6.15"
+    "mavon-editor": "^2.6.15",
+    "jsonp": "^0.2.1",
+    "axios": "^0.18.0",
+    "qs": "^6.5.2",
+    "vue-blogeditor": "^0.0.5"
   },
   "engines": {
     "node": ">= 6.0.0",

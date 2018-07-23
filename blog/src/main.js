@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
-import {Dialog, Button, Input, Carousel, CarouselItem} from 'element-ui'
+import {Dialog, Button, Input, Carousel, CarouselItem, Row, Col, Select, Option, Upload, Alert} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(VueResource)
@@ -13,6 +13,12 @@ Vue.use(Button)
 Vue.use(Input)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Upload)
+Vue.use(Alert)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

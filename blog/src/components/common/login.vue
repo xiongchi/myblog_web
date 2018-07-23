@@ -1,6 +1,5 @@
 <template>
   <div class="login-div">
-    <div class="ll">
       <el-input class="username" placeholder="请输入用户名"></el-input>
       <el-input class="password" placeholder="请输入密码"></el-input>
       <span class="qus-span">
@@ -17,7 +16,6 @@
         <img src="/static/img/QQ.png" style="float: left;margin-left: 5%;">
         <img src="/static/img/wechat.png" style="margin-left: 5%">
       </div>
-    </div>
   </div>
 </template>
 
